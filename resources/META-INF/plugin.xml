@@ -1,0 +1,43 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!--&lt;!&ndash; uncomment to enable plugin in all products-->
+  <!--https://intellij-support.jetbrains.com/hc/en-us/community/posts/206762465-How-do-I-make-use-of-the-javascript-psi- -->
+
+  <!-- Add dependency to non-IDEA, TsLint and JavaScript (don't forget to update the SDK with the jars from /Users/johndoe/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/172.3968.27/WebStorm.app/Contents/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar) -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>tslint</depends>
+  <depends>JavaScript</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+      <action id="TypeScriptFormat" class="TypeScriptFormatAction" text="TSLint Format"
+              description="Formats a typescript file with TSLint">
+          <add-to-group group-id="CodeMenu" anchor="first"/>
+      </action>
+  </actions>
+
+</idea-plugin>
